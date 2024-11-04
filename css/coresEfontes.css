@@ -1,0 +1,62 @@
+:root {
+  --white: #fff;
+  --slate-950: #0e1118;
+  --slate-850: #202632;
+  --slate-750: #333c4e;
+  --slate-700: #3d475c;
+  --slate-650: #48536b;
+  --slate-600: #525f7a;
+  --slate-550: #5d6b89;
+  --slate-500: #687899;
+  --slate-450: #7385a9;
+  --slate-400: #8191b5;
+  --slate-350: #909ebe;
+  --slate-300: #a0acc7;
+  --slate-250: #b0b9d0;
+  --slate-200: #bfc7d9;
+  --slate-150: #cfd5e2;
+  --slate-100: #dfe3eb;
+  --slate-050: #eff1f4;
+  --ac-1: #3d738d;
+  --ac-2:#F1F2FF;
+}
+
+/* Fontes */
+.pt {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-bold {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-bold-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.karla-200 {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.karla-400 {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.karla-700 {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}

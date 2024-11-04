@@ -1,0 +1,33 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "PT Sans";
+  font-size: 1.25rem;
+  box-sizing: border-box;
+  color: var(--slate-700);
+
+}
+
+.container-1200 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--white);
+  color: var(--slate-700);
+  border-radius: 96px;
+  border: 6px solid var(--ac-2);
+  cursor: pointer;
+  font-size: 1em;
+}
+
+
