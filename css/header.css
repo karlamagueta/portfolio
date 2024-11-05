@@ -1,5 +1,10 @@
-.header {
-    height: 100vh;
+
+.menu li a:focus,
+.menu li a:active,
+.menu li a:visited {
+    color: inherit; 
+    background: transparent; 
+    outline: none; 
 }
 
 .menu {
@@ -61,7 +66,7 @@
     transition: padding-bottom 0.5s ease;
 }
 
-.menu a.active {
+.menu li a.active {
     color: var(--slate-050); 
 }
 .background {
@@ -98,7 +103,7 @@
 
 .hero-ticker {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 0;
     width: 100%;
     font-weight: 900;
@@ -160,7 +165,7 @@
 }
 
 .hero-card {
-    margin-top: 190px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;

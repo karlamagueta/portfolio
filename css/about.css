@@ -1,57 +1,87 @@
 /* Estilo base para a seção About */
 #about {
     position: relative;
-    overflow: hidden; /* Para garantir que os cartões não saiam do contêiner */
+    overflow: hidden;
 }
 
-/* Animação para as imagens de fundo */
+.about-card {
+    position: relative;
+    display: flex;
+    background-color: #68789907; 
+    padding: 30px;
+    border-radius: 48px;
+    z-index: 1;
+    max-width: 600px;
+    margin: -280px auto 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    overflow: hidden;
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(170, 170, 175, 0.05); 
+    backdrop-filter: blur(5px); 
+    z-index: -1;
+    transform: scale(1.1); 
+    border-radius: 48px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.background-images {
+    position: relative; 
+    height: 300px; 
+    opacity: 0.7;
+}
+
 .purple, .turquoise {
     position: absolute;
-    opacity: 0.8; /* Um pouco de transparência */
-    transition: transform 0.5s ease; /* Animação suave */
+    width: 30%;
+    opacity: 0.8;
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Animações específicas para as imagens */
 .purple {
-    top: 10%; /* Ajuste conforme necessário */
-    left: 15%; /* Ajuste conforme necessário */
-    animation: floatPurple 6s ease-in-out infinite alternate;
+    top: 0; 
+    left: 1cm;
+    animation: floatPurple 4s ease-in-out infinite;
 }
 
 .turquoise {
-    bottom: 10%; /* Ajuste conforme necessário */
-    right: 15%; /* Ajuste conforme necessário */
-    animation: floatTurquoise 6s ease-in-out infinite alternate;
+    top: 300px; 
+    right: 10%;
+    animation: floatTurquoise 4s ease-in-out infinite;
+    rotate: 15deg;
 }
 
-/* Keyframes para animação das imagens */
+
 @keyframes floatPurple {
-    0% {
+    0%, 100% {
         transform: translateY(0);
+        opacity: 0.8;
     }
-    100% {
-        transform: translateY(-15px); /* Sobe */
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
     }
 }
 
 @keyframes floatTurquoise {
-    0% {
+    0%, 100% {
         transform: translateY(0);
+        opacity: 0.8;
     }
-    100% {
-        transform: translateY(15px); /* Desce */
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
     }
 }
 
-/* Estilos para os cartões */
-.about-card {
-    opacity: 0; /* Começa invisível */
-    transform: translateY(50px); /* Começa deslocado para baixo */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Suave */
-}
-
-/* Quando a classe "visible" for adicionada, eles sobem */
-.about-card.visible {
-    opacity: 1;
-    transform: translateY(0); /* Volta para a posição original */
+#about button {
+    margin: 40px auto;
 }
