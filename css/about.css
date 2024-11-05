@@ -1,0 +1,57 @@
+/* Estilo base para a seção About */
+#about {
+    position: relative;
+    overflow: hidden; /* Para garantir que os cartões não saiam do contêiner */
+}
+
+/* Animação para as imagens de fundo */
+.purple, .turquoise {
+    position: absolute;
+    opacity: 0.8; /* Um pouco de transparência */
+    transition: transform 0.5s ease; /* Animação suave */
+}
+
+/* Animações específicas para as imagens */
+.purple {
+    top: 10%; /* Ajuste conforme necessário */
+    left: 15%; /* Ajuste conforme necessário */
+    animation: floatPurple 6s ease-in-out infinite alternate;
+}
+
+.turquoise {
+    bottom: 10%; /* Ajuste conforme necessário */
+    right: 15%; /* Ajuste conforme necessário */
+    animation: floatTurquoise 6s ease-in-out infinite alternate;
+}
+
+/* Keyframes para animação das imagens */
+@keyframes floatPurple {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px); /* Sobe */
+    }
+}
+
+@keyframes floatTurquoise {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(15px); /* Desce */
+    }
+}
+
+/* Estilos para os cartões */
+.about-card {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(50px); /* Começa deslocado para baixo */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Suave */
+}
+
+/* Quando a classe "visible" for adicionada, eles sobem */
+.about-card.visible {
+    opacity: 1;
+    transform: translateY(0); /* Volta para a posição original */
+}

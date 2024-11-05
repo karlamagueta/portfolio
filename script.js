@@ -38,3 +38,40 @@ menuItems.forEach(item => {
         moveBackground(item);
     });
 });
+
+
+
+
+// Menu hamburguer
+document.getElementById("hamburger-menu").addEventListener("click", function () {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+});
+
+
+
+
+// ABOUT
+
+
+// Seleciona todos os cartões "about"
+const aboutCards = document.querySelectorAll('.about-card');
+
+// Função para verificar a visibilidade dos cartões
+function checkVisibility() {
+    const triggerBottom = window.innerHeight * 0.8; // 80% da altura da tela
+
+    aboutCards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+
+        if (cardTop < triggerBottom) {
+            card.classList.add('visible'); // Adiciona a classe que faz o cartão aparecer
+        }
+    });
+}
+
+// Adiciona o evento de rolagem
+window.addEventListener('scroll', checkVisibility);
+
+// Verifica a visibilidade no carregamento inicial
+document.addEventListener('DOMContentLoaded', checkVisibility);
